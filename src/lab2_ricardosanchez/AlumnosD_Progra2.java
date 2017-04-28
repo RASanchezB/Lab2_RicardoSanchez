@@ -68,6 +68,11 @@ public class AlumnosD_Progra2 {
     public void setGradoAcademico(String GradoAcademico) {
         this.GradoAcademico = GradoAcademico;
     }
+
+    @Override
+    public String toString() {
+        return "AlumnosD_Progra2{" + "Apodo=" + Apodo + ", NumCuenta=" + NumCuenta + ", edad=" + edad + ", recistencia=" + recistencia + ", TipoDArma=" + TipoDArma + ", GradoAcademico=" + GradoAcademico + '}';
+    }
     
     
 }

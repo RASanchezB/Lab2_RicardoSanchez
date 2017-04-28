@@ -68,5 +68,10 @@ public class Rusos {
     public void setTipoDArma(String TipoDArma) {
         this.TipoDArma = TipoDArma;
     }
+
+    @Override
+    public String toString() {
+        return "Rusos{" + "Nombre=" + Nombre + ", ID=" + ID + ", edad=" + edad + ", Rango=" + Rango + ", resistencia=" + resistencia + ", TipoDArma=" + TipoDArma + '}';
+    }
     
 }

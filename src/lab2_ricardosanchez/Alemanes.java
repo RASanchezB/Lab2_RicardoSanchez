@@ -68,5 +68,10 @@ public class Alemanes {
     public void setTipoDArma(String TipoDArma) {
         this.TipoDArma = TipoDArma;
     }
+
+    @Override
+    public String toString() {
+        return "Alemanes{" + "Alias=" + Alias + ", edad=" + edad + ", Casta=" + Casta + ", Rango=" + Rango + ", resistencia=" + resistencia + ", TipoDArma=" + TipoDArma + '}';
+    }
     
 }
