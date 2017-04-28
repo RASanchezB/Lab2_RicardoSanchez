@@ -412,7 +412,15 @@ public class Lab2_RicardoSanchez {
 
                 case 5:// SIMULACION PARA LA GUERRA ----------------------------------------------------------------------------------
                     System.out.println("La Guerra");
-                    
+                    int ronda = 0;
+                    //do{
+                        int cont = 0;
+                        while(cont < Aleman.size()){
+                           (Aleman.get(cont));
+                            
+                        }
+                        ronda++;
+                    //}while (false);
                     
                     
                 case 6:
