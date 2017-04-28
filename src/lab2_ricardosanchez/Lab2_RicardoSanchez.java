@@ -417,7 +417,7 @@ public class Lab2_RicardoSanchez {
                         int cont = 0;
                         while(cont < Aleman.size()){
                            (Aleman.get(cont));
-                            
+                            System.out.println("");
                         }
                         ronda++;
                     //}while (false);
