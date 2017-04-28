@@ -8,7 +8,8 @@ import java.util.Scanner;
  * @author Ricardo
  */
 public class Lab2_RicardoSanchez {
-
+    static int ID, NumCuenta, ResistenciaR, ResistenciaA, ResistenciaAl, EdadR, EdadA, EdadAl;
+    static String Casta, Alias, Apodo, Nombre, TipoDArmaA, TipoDArmaR, TipoDArmaAl,RangoR, RangoA, GradoAcademico;
     /**
      * @param args the command line arguments
      */
@@ -43,31 +44,31 @@ public class Lab2_RicardoSanchez {
                     do {
                         System.out.println("Reclutamiento del soldado #" + contA);
                         System.out.println("Ingrese el Alias del soldado");
-                        String Alias = sc.next();
+                        Alias = sc.next();
                         System.out.println("Ingrese la edad:");
-                        int Edad = sc.nextInt();
+                        EdadA = sc.nextInt();
                         System.out.println("Ingrese casta:");
-                        String Casta = sc.next();
+                        Casta = sc.next();
                         System.out.println("Ingrese rango");
-                        String Rango = sc.next();
+                        RangoA = sc.next();
                         System.out.println("Elija un arma entre la lista: (Ingrese la letra)"
                                 + "\na) Subfusiles MP40"
                                 + "\nb) Ametralladora MG42"
                                 + "\nc) Pistora Walther p38");
-                        String TipoDArma = sc.next();
-                        while (!TipoDArma.equals("a") && !TipoDArma.equals("b") && !TipoDArma.equals("c")) {
+                        TipoDArmaA = sc.next();
+                        while (!TipoDArmaA.equals("a") && !TipoDArmaA.equals("b") && !TipoDArmaA.equals("c")) {
                             System.out.println("Input invalido. Ingrese otro:");
-                            TipoDArma = sc.next();
+                            TipoDArmaA = sc.next();
                         }
-                        if (TipoDArma.equals("a")) {
-                            TipoDArma = "Subfusiles MP40";
-                        } else if (TipoDArma.equals("b")) {
-                            TipoDArma = "Ametralladora MG42";
-                        } else if (TipoDArma.equals("c")) {
-                            TipoDArma = "Pistora Walther p38";
+                        if (TipoDArmaA.equals("a")) {
+                            TipoDArmaA = "Subfusiles MP40";
+                        } else if (TipoDArmaA.equals("b")) {
+                            TipoDArmaA = "Ametralladora MG42";
+                        } else if (TipoDArmaA.equals("c")) {
+                            TipoDArmaA = "Pistora Walther p38";
                         }
-                        int Resistencia = Edad * 8;
-                        Aleman.add(new Alemanes(Alias, Edad, Casta, Rango, Resistencia, TipoDArma));
+                        ResistenciaA = EdadA * 8;
+                        Aleman.add(new Alemanes(Alias, EdadA, Casta, RangoA, ResistenciaA, TipoDArmaA));
                         contA++;
                         System.out.println("Desea reclutar otro soldado [s/n]");
                         seguir = sc.next().charAt(0);
@@ -80,37 +81,37 @@ public class Lab2_RicardoSanchez {
                     do {
                         System.out.println("Reclutamiento del soldado #" + contR);
                         System.out.println("Ingrese el nombre del soldado");
-                        String Alias = sc.next();
+                        Alias = sc.next();
                         System.out.println("Ingrese la edad:");
-                        int Edad = sc.nextInt();
+                        EdadR = sc.nextInt();
                         System.out.println("Ingrese ID:");
-                        int ID = sc.nextInt();
+                        ID = sc.nextInt();
                         System.out.println("Ingrese rango");
-                        String Rango = sc.next();
+                        RangoR = sc.next();
                         System.out.println("Elija un arma entre la lista: (Ingrese la letra)"
                                 + "\na) Ak-47"
                                 + "\nb) Revolver"
                                 + "\nc) RPG7");
-                        String TipoDArma = sc.next();
-                        while (Edad < 25 && TipoDArma.equals("c")) {
-                            System.out.println("Arma Invalida para su edad. Ingrese otra");
-                            TipoDArma = sc.next();
+                        TipoDArmaR = sc.next();
+                        while (EdadR < 25 && TipoDArmar.equals("c")) {
+                            System.out.println("Arma INvalida para su edad. Ingrese otra");
+                            TipoDArmaR = sc.next();
                         }
-                        while (!TipoDArma.equals("a") && !TipoDArma.equals("b") && !TipoDArma.equals("c")) {
+                        while (!TipoDArmaR.equals("a") && !TipoDArmaR.equals("b") && !TipoDArmaR.equals("c")) {
                             System.out.println("Input invalido. Ingrese otro:");
-                            TipoDArma = sc.next();
+                            TipoDArmaR = sc.next();
                         }
 
-                        if (TipoDArma.equals("a")) {
-                            TipoDArma = "Ak-47";
-                        } else if (TipoDArma.equals("b")) {
-                            TipoDArma = "Revolver";
-                        } else if (TipoDArma.equals("c")) {
-                            TipoDArma = "RPG7";
+                        if (TipoDArmaR.equals("a")) {
+                            TipoDArmaR = "Ak-47";
+                        } else if (TipoDArmaR.equals("b")) {
+                            TipoDArmaR = "Revolver";
+                        } else if (TipoDArmaR.equals("c")) {
+                            TipoDArmaR = "RPG7";
                         }
-                        int Resistencia = Edad * 8;
-                        if (Edad > 18) {
-                            Ruso.add(new Rusos(Alias, ID, Edad, Rango, Resistencia, TipoDArma));
+                        ResistenciaR = EdadR * 8;
+                        if (EdadR > 18) {
+                            Ruso.add(new Rusos(Alias, ID, EdadR, RangoR, ResistenciaR, TipoDArmaR));
                             contR++;
                         } else {
                             System.out.println("No tiene la edad suficiente para ingresar");
@@ -127,33 +128,33 @@ public class Lab2_RicardoSanchez {
                     do {
                         System.out.println("Reclutamiento del soldado #" + contAl);
                         System.out.println("Ingrese el Apodo del soldado");
-                        String Apodo = sc.next();
+                        Apodo = sc.next();
                         System.out.println("Ingrese la edad:");
-                        int Edad = sc.nextInt();
+                        EdadAl = sc.nextInt();
                         System.out.println("Ingrese numero de cuenta:");
-                        int NumCuenta = sc.nextInt();
+                        NumCuenta = sc.nextInt();
                         System.out.println("Ingrese grado academico");
-                        String GradoAcademico = sc.next();
+                        GradoAcademico = sc.next();
                         System.out.println("Elija un arma entre la lista: (Ingrese la letra)"
                                 + "\na) Disco duro"
                                 + "\nb) Controles de wii"
                                 + "\nc) Laptop");
-                        String TipoDArma = sc.next();
-                        while (!TipoDArma.equals("a") && !TipoDArma.equals("b") && !TipoDArma.equals("c")) {
+                        TipoDArmaAl = sc.next();
+                        while (!TipoDArmaAl.equals("a") && !TipoDArmaAl.equals("b") && !TipoDArmaAl.equals("c")) {
                             System.out.println("Input invalido. Ingrese otro:");
-                            TipoDArma = sc.next();
+                            TipoDArmaAl = sc.next();
                         }
 
-                        if (TipoDArma.equals("a")) {
-                            TipoDArma = "Disco duro";
-                        } else if (TipoDArma.equals("b")) {
-                            TipoDArma = "Control de wii";
-                        } else if (TipoDArma.equals("c")) {
-                            TipoDArma = "Laptop";
+                        if (TipoDArmaAl.equals("a")) {
+                            TipoDArmaAl = "Disco duro";
+                        } else if (TipoDArmaAl.equals("b")) {
+                            TipoDArmaAl = "Control de wii";
+                        } else if (TipoDArmaAl.equals("c")) {
+                            TipoDArmaAl = "Laptop";
                         }
-                        int Resistencia = Edad * 8;
-                        if (Edad > 16) {
-                            Alumnos.add(new AlumnosD_Progra2(Apodo, NumCuenta, Edad, Resistencia, TipoDArma, GradoAcademico));
+                        ResistenciaAl = EdadAl * 8;
+                        if (EdadAl > 16) {
+                            Alumnos.add(new AlumnosD_Progra2(Apodo, NumCuenta, EdadAl, ResistenciaAl, TipoDArmaAl, GradoAcademico));
                             contAl++;
                         } else {
                             System.out.println("No tiene la edad suficiente para ingresar");
@@ -410,7 +411,7 @@ public class Lab2_RicardoSanchez {
                     break;
 
                 case 5:// SIMULACION PARA LA GUERRA ----------------------------------------------------------------------------------
-                    
+                    System.out.println("La Guerra");
                     
                     
                     
